@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --icon=mj.ico buscarLeituras.py

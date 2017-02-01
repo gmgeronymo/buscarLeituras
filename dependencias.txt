@@ -1,0 +1,6 @@
+pyodbc
+psycopg2
+numpy
+PyQt5
+matplotlib
+natsort

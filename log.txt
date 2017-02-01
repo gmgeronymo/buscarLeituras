@@ -1,0 +1,1453 @@
+running py2exe
+Traceback (most recent call last):
+  File "setup.py", line 28, in <module>
+    "includes": includes,
+  File "C:\Python34\lib\distutils\core.py", line 148, in setup
+    dist.run_commands()
+  File "C:\Python34\lib\distutils\dist.py", line 955, in run_commands
+    self.run_command(cmd)
+  File "C:\Python34\lib\distutils\dist.py", line 974, in run_command
+    cmd_obj.run()
+  File "C:\Python34\lib\site-packages\py2exe\distutils_buildexe.py", line 188, in run
+    self._run()
+  File "C:\Python34\lib\site-packages\py2exe\distutils_buildexe.py", line 267, in _run
+    builder.analyze()
+  File "C:\Python34\lib\site-packages\py2exe\runtime.py", line 173, in analyze
+    target.analyze(mf)
+  File "C:\Python34\lib\site-packages\py2exe\runtime.py", line 74, in analyze
+    modulefinder.run_script(self.script)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 86, in run_script
+    self._scan_code(mod.__code__, mod)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 394, in _scan_code
+    self.safe_import_hook(name, mod, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 288, in _find_and_load
+    self._gcd_import(parent)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 357, in _find_and_load
+    self._scan_code(module.__code__, module)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 394, in _scan_code
+    self.safe_import_hook(name, mod, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 357, in _find_and_load
+    self._scan_code(module.__code__, module)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 401, in _scan_code
+    self._scan_code(c, mod)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 401, in _scan_code
+    self._scan_code(c, mod)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 394, in _scan_code
+    self.safe_import_hook(name, mod, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 123, in import_hook
+    module = self._gcd_import(name, package, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 357, in _find_and_load
+    self._scan_code(module.__code__, module)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 394, in _scan_code
+    self.safe_import_hook(name, mod, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 357, in _find_and_load
+    self._scan_code(module.__code__, module)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 394, in _scan_code
+    self.safe_import_hook(name, mod, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 288, in _find_and_load
+    self._gcd_import(parent)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+  File "C:\Python34\lib\site-packages\py2exe\hooks.py", line 291, in __getattr__
+    self.__finder.safe_import_hook(renamed, caller=self)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 138, in safe_import_hook
+    self.import_hook(name, caller, fromlist, level)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 120, in import_hook
+    module = self._gcd_import(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 274, in _gcd_import
+    return self._find_and_load(name)
+  File "C:\Python34\lib\site-packages\py2exe\mf3.py", line 298, in _find_and_load
+    getattr(parent_module, name.rpartition('.')[2])
+RuntimeError: maximum recursion depth exceeded while calling a Python object
