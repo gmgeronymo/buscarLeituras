@@ -3,7 +3,7 @@
 # Data inicial: 23/01/2017
 
 # Dados do programa
-__version__="1.0"
+__version__="1.1"
 __date__="31/01/2017"
 __appname__="Buscar Leituras"
 __author__="Gean Marcos Geronymo"
@@ -633,8 +633,6 @@ class App(QMainWindow):
                 freq = [0.01, 0.02, 0.03, 0.04, 0.055, 0.062, 0.065, 0.12, 0.3, 0.4, 0.5, 1, 10, 20, 30, 50, 70, 100, 200, 300, 500, 700, 800, 1000]
             else:
                 freq = [0.01, 0.02, 0.03, 0.04, 0.055, 0.06, 0.065, 0.12, 0.3, 0.4, 0.5, 1, 10, 20, 30, 50, 70, 100, 200, 300, 500, 700, 800, 1000]                
-
-            #repeticoes = 12
             try:
                 clipboard = ""
                 for linha in range(repeticoes+3):
@@ -643,24 +641,27 @@ class App(QMainWindow):
                             if coluna == 0:
                                 clipboard += self.resultados.temperaturaMedia + '\t'
                             elif coluna == 4:
-                                clipboard += self.faixa792Select.currentText() + '\t'
+                                if self.faixa792Select.currentText().strip() == '0':
+                                    clipboard += '\t'
+                                else:
+                                    clipboard += self.faixa792Select.currentText() + '\t'
                             elif coluna == 5:
                                 clipboard += self.valmedSelect.currentText() + '\t'
-                            elif coluna == 7:
+                            elif coluna == 6:
                                 clipboard += self.dataValue.text() + '\t'
                             elif coluna == 28:
                                 clipboard += '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
                         elif linha == 1:
                             if coluna == 0:
                                 clipboard += self.resultados.umidadeMedia + '\t'
                             elif coluna == 4:
-                                clipboard += self.registro + '\t'
+                                clipboard += 'Registro: ' + self.registro + '\t'
                             elif coluna == 28:
                                 clipboard += '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
                         elif linha == 2:
                             if coluna == 4:
                                 clipboard += 'Freq (kHz) \t'
@@ -672,7 +673,7 @@ class App(QMainWindow):
                             elif coluna == 28:
                                 clipboard += str(int(freq[coluna-5])) + '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
                         elif linha > 2:
                             if coluna in range(5,28):
                                 try:
@@ -705,7 +706,7 @@ class App(QMainWindow):
                                 except:
                                     clipboard += '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
 
                     cb.setText(clipboard, mode=cb.Clipboard)
 
@@ -719,8 +720,6 @@ class App(QMainWindow):
                 freq = [0.01, 0.02, 0.03, 0.04, 0.05, 0.055, 0.062, 0.065, 0.12, 0.5, 0.6, 1.0, 5.0, 10.0, 20.0, 50.0, 70.0, 100.0]
             else:
                 freq = [0.01, 0.02, 0.03, 0.04, 0.05, 0.055, 0.06, 0.065, 0.12, 0.5, 0.6, 1.0, 5.0, 10.0, 20.0, 50.0, 70.0, 100.0]
-
-            #repeticoes = 12
             try:
                 clipboard = ""
                 for linha in range(repeticoes+3):
@@ -730,21 +729,21 @@ class App(QMainWindow):
                                 clipboard += self.resultados.temperaturaMedia + '\t'
                             elif coluna == 4:
                                 clipboard += self.valmedSelect.currentText() + ' mA \t'
-                            elif coluna == 6:
+                            elif coluna == 5:
                                 clipboard += self.dataValue.text() + '\t'
                             elif coluna == 22:
                                 clipboard += '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
                         elif linha == 1:
                             if coluna == 0:
                                 clipboard += self.resultados.umidadeMedia + '\t'
                             elif coluna == 4:
-                                clipboard += self.registro + '\t'
+                                clipboard += 'Registro: ' + self.registro + '\t'
                             elif coluna == 22:
                                 clipboard += '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
                         elif linha == 2:
                             if coluna == 4:
                                 clipboard += 'Freq (kHz) \t'
@@ -756,7 +755,7 @@ class App(QMainWindow):
                             elif coluna == 22:
                                 clipboard += str(int(freq[coluna-5])) + '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
                         elif linha > 2:
                             if coluna in range(5,22):
                                 try:
@@ -789,7 +788,7 @@ class App(QMainWindow):
                                 except:
                                     clipboard += '\n'
                             else:
-                                clipboard += ' \t'
+                                clipboard += '\t'
 
                     cb.setText(clipboard, mode=cb.Clipboard)
 
