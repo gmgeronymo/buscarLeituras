@@ -3,8 +3,8 @@
 # Data inicial: 23/01/2017
 
 # Dados do programa
-__version__="1.1"
-__date__="31/01/2017"
+__version__="1.2"
+__date__="03/02/2017"
 __appname__="Buscar Leituras"
 __author__="Gean Marcos Geronymo"
 __author_email__="gean.geronymo@gmail.com"
@@ -30,14 +30,14 @@ from numpy import mean, std
 
 # módulos da interface gráfica Qt5
 from PyQt5.QtCore import QDir, Qt
-from PyQt5.QtGui import QFont, QPalette, QColor, QIcon
+from PyQt5.QtGui import (QFont, QPalette, QColor, QIcon, QKeySequence)
 
 from PyQt5.QtWidgets import (QMainWindow, QWidget, QTableWidget,QTableWidgetItem,
                              QVBoxLayout, QHBoxLayout, QApplication, QCheckBox,
                              QColorDialog, QDialog, QErrorMessage, QFileDialog,
                              QFontDialog, QFrame, QGridLayout, QGroupBox, QSizePolicy,  
                              QInputDialog, QLabel, QLineEdit, QMessageBox, QPushButton,
-                             QRadioButton, QComboBox, QDockWidget, QSpinBox)
+                             QRadioButton, QComboBox, QDockWidget, QSpinBox, QAction)
 
 # os graficos sao gerados utilizando a biblioteca matplotlib
 import matplotlib.pyplot as plt
@@ -93,6 +93,9 @@ class App(QMainWindow):
         self.setCentralWidget(self.tabifyDockWidget(self.dockTable, self.dockCondicoesAmbientais))
         self.dockTable.show()
         self.dockTable.raise_()
+
+        self.createActions()
+        self.createMenus()
         
         self.show()
 
@@ -123,8 +126,8 @@ class App(QMainWindow):
         self.createOptionsGroupBox()
         self.createRegistroGroupBox()
         self.createCondicoesAmbientaisGroupBox()
-        self.createAcoesGroupBox()
-        self.createExportarGroupBox()
+        #self.createAcoesGroupBox()
+        #self.createExportarGroupBox()
 
         # cria um layout horizontal com os groupbox de opções, registro e condições ambientais
         self.topLayout = QHBoxLayout()
@@ -133,14 +136,14 @@ class App(QMainWindow):
         self.topLayout.addWidget(self.condicoesAmbientaisGroupBox)
 
         # cria um layout horizontal com os groupbox de botões "Ações" e "Exportar"
-        self.midLayout = QHBoxLayout()
-        self.midLayout.addWidget(self.acoesGroupBox)
-        self.midLayout.addWidget(self.exportarGroupBox)
+        #self.midLayout = QHBoxLayout()
+        #self.midLayout.addWidget(self.acoesGroupBox)
+        #self.midLayout.addWidget(self.exportarGroupBox)
 
         # cria um layout vertical agrupando os dois layouts criados anteriormente
         self.layout = QVBoxLayout()
         self.layout.addLayout(self.topLayout)
-        self.layout.addLayout(self.midLayout)
+        #self.layout.addLayout(self.midLayout)
         self.dockMainWidget.setLayout(self.layout)
         # aplica políticas de redimensionamento:
         # o redimensionamento horizontal é livre, mas o vertical é fixo
@@ -204,6 +207,49 @@ class App(QMainWindow):
                 QMessageBox.critical(self, "Erro",
                 "Erro ao conectar com o Banco de Dados!",
                 QMessageBox.Abort)
+
+    def createActions(self):
+        self.buscarLeiturasAct = QAction("&Buscar Leituras", self, shortcut="Ctrl+B", 
+                                statusTip="Busca as leituras no banco de dados", triggered=self.buscarLeiturasDB)
+        
+        self.copiarPlanilhaAct = QAction("&Copiar Modelo Planilha", self, shortcut=QKeySequence.Copy,
+                                statusTip="Copia os dados no formato da planilha modelo", triggered=self.copiarModeloPlanilha)
+
+        self.copiarGraficoAct = QAction("&Copiar Gráfico", self, shortcut="Ctrl+G", 
+                                statusTip="Copia o grafico das condições ambientais", triggered=self.copiarGrafico)
+
+        self.quitAct = QAction("&Sair", self, shortcut="Ctrl+Q",
+                statusTip="Quit the application", triggered=self.close)
+
+        self.aboutAct = QAction("&Sobre", self,
+                statusTip="Mostra informações sobre o aplicativo",
+                triggered=self.about)
+
+        self.aboutQtAct = QAction("Sobre &Qt", self,
+                statusTip="Mostra informações sobre a biblioteca Qt",
+                triggered=QApplication.instance().aboutQt)
+
+    def about(self):
+        QMessageBox.about(self, "Sobre Buscar Leituras",
+                """Programa desenvolvido para buscar as leituras geradas pelo Programa de
+Calibração de Padrões de Transferência Térmica AC-DC em Tensão e
+Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format(__date__,__version__))
+
+    def createMenus(self):
+        self.fileMenu = self.menuBar().addMenu("&Ações")
+        self.fileMenu.addAction(self.buscarLeiturasAct)
+        self.fileMenu.addSeparator()
+        self.fileMenu.addAction(self.quitAct)
+
+        self.editMenu = self.menuBar().addMenu("&Exportar")
+        self.editMenu.addAction(self.copiarPlanilhaAct)
+        self.editMenu.addAction(self.copiarGraficoAct)
+
+        self.menuBar().addSeparator()
+
+        self.helpMenu = self.menuBar().addMenu("&Ajuda")
+        self.helpMenu.addAction(self.aboutAct)
+        self.helpMenu.addAction(self.aboutQtAct)
 
     def createOptionsGroupBox(self):
         self.optionsGroupBox = QGroupBox("Opções")
@@ -328,41 +374,41 @@ class App(QMainWindow):
 
         self.condicoesAmbientaisGroupBox.setLayout(condicoesAmbientaisGroupBoxLayout)
 
-    def createAcoesGroupBox(self):
-        self.acoesGroupBox = QGroupBox("Ações")
-
-        self.buscarLeituras = self.createButton("Buscar Leituras", self.buscarLeituras)
-        
-        acoesGroupBoxLayout = QHBoxLayout()
-        acoesGroupBoxLayout.addWidget(self.buscarLeituras)
-
-        self.acoesGroupBox.setLayout(acoesGroupBoxLayout)
-
-    def createExportarGroupBox(self):
-        self.exportarGroupBox = QGroupBox("Exportar")
-        
-        self.copiarNomeRegistro = self.createButton("Copiar Nome do Registro", self.copiarNomeReg)
-        self.copiarData = self.createButton("Copiar Data", self.copiarDataReg)
-        self.copiarLeituras = self.createButton("Copiar Leituras", self.copiarDiferencas)
-        self.copiarModelo = self.createButton("Copiar Modelo Planilha", self.copiarModeloPlanilha)
-        self.copiarCondicoesAmbientais = self.createButton("Copiar Condições Ambientais", self.copiarTempUmid)
-        self.copiarFigura = self.createButton("Copiar Gráfico", self.copiarGrafico)
-        
-        exportarGroupBoxLayout = QHBoxLayout()
-        
-        exportarGroupBoxLayout.addWidget(self.copiarNomeRegistro)
-        exportarGroupBoxLayout.addWidget(self.copiarData)
-        exportarGroupBoxLayout.addWidget(self.copiarLeituras)
-        exportarGroupBoxLayout.addWidget(self.copiarCondicoesAmbientais)
-        exportarGroupBoxLayout.addWidget(self.copiarModelo)
-        exportarGroupBoxLayout.addWidget(self.copiarFigura)
-
-        self.exportarGroupBox.setLayout(exportarGroupBoxLayout)
-
-    def createButton(self, text, member):
-        button = QPushButton(text)
-        button.clicked.connect(member)
-        return button  
+##    def createAcoesGroupBox(self):
+##        self.acoesGroupBox = QGroupBox("Ações")
+##
+##        self.buscarLeituras = self.createButton("Buscar Leituras", self.buscarLeiturasDB)
+##        
+##        acoesGroupBoxLayout = QHBoxLayout()
+##        acoesGroupBoxLayout.addWidget(self.buscarLeituras)
+##
+##        self.acoesGroupBox.setLayout(acoesGroupBoxLayout)
+##
+##    def createExportarGroupBox(self):
+##        self.exportarGroupBox = QGroupBox("Exportar")
+##        
+##        self.copiarNomeRegistro = self.createButton("Copiar Nome do Registro", self.copiarNomeReg)
+##        self.copiarData = self.createButton("Copiar Data", self.copiarDataReg)
+##        self.copiarLeituras = self.createButton("Copiar Leituras", self.copiarDiferencas)
+##        self.copiarModelo = self.createButton("Copiar Modelo Planilha", self.copiarModeloPlanilha)
+##        self.copiarCondicoesAmbientais = self.createButton("Copiar Condições Ambientais", self.copiarTempUmid)
+##        self.copiarFigura = self.createButton("Copiar Gráfico", self.copiarGrafico)
+##        
+##        exportarGroupBoxLayout = QHBoxLayout()
+##        
+##        exportarGroupBoxLayout.addWidget(self.copiarNomeRegistro)
+##        exportarGroupBoxLayout.addWidget(self.copiarData)
+##        exportarGroupBoxLayout.addWidget(self.copiarLeituras)
+##        exportarGroupBoxLayout.addWidget(self.copiarCondicoesAmbientais)
+##        exportarGroupBoxLayout.addWidget(self.copiarModelo)
+##        exportarGroupBoxLayout.addWidget(self.copiarFigura)
+##
+##        self.exportarGroupBox.setLayout(exportarGroupBoxLayout)
+##
+##    def createButton(self, text, member):
+##        button = QPushButton(text)
+##        button.clicked.connect(member)
+##        return button  
 
     def updateTable(self,linhas,colunas):
        
@@ -415,7 +461,7 @@ class App(QMainWindow):
                 grandezaTensao = False
 
     # funcao buscar leituras, chamada através do botão da interface gráfica                                               
-    def buscarLeituras(self):
+    def buscarLeiturasDB(self):
         # coloca o cursor em espera
         QApplication.setOverrideCursor(Qt.WaitCursor)
         try:
@@ -561,57 +607,57 @@ class App(QMainWindow):
             
                 
     # copiar a tabela de diferenças para a área de transferência (inclusive as não selecionadas)
-    def copiarDiferencas(self):
-        try:
-            clipboard = ""
-            nfreq = len(self.resultados.diferencas)
-            for i in range(self.resultados.linhas):
-                j = 0
-                for freq in realsorted(self.resultados.diferencas.keys()):
-                    clipboard += str(self.resultados.diferencas[freq][i][0]).replace('.',',')
-                    j += 1
-                    if j < nfreq:
-                        clipboard += '\t'
-                clipboard += '\n'
-            cb.setText(clipboard, mode=cb.Clipboard)
-        except:
-            QApplication.restoreOverrideCursor()
-            QMessageBox.critical(self, "Erro",
-                "Nenhum registro aberto!",
-            QMessageBox.Abort)
-
-    # copiar temperatura e umidade para a área de transferência
-    def copiarTempUmid(self):
-        try:
-            clipboard = self.resultados.temperaturaMedia+'\n'+self.resultados.umidadeMedia
-            cb.setText(clipboard, mode=cb.Clipboard)
-        except:
-            QApplication.restoreOverrideCursor()
-            QMessageBox.critical(self, "Erro",
-                "Nenhum registro aberto!",
-            QMessageBox.Abort)
-
-    # copiar nome do registro para a área de transferência
-    def copiarNomeReg(self):
-        try:
-            clipboard = self.registro
-            cb.setText(clipboard, mode=cb.Clipboard)
-        except:
-            QApplication.restoreOverrideCursor()
-            QMessageBox.critical(self, "Erro",
-                "Nenhum registro aberto!",
-            QMessageBox.Abort)
-
-    # copiar data do registro para a área de transferência
-    def copiarDataReg(self):
-        try:
-            clipboard = self.dataValue.text()
-            cb.setText(clipboard, mode=cb.Clipboard)
-        except:
-            QApplication.restoreOverrideCursor()
-            QMessageBox.critical(self, "Erro",
-                "Nenhum registro aberto!",
-            QMessageBox.Abort)
+##    def copiarDiferencas(self):
+##        try:
+##            clipboard = ""
+##            nfreq = len(self.resultados.diferencas)
+##            for i in range(self.resultados.linhas):
+##                j = 0
+##                for freq in realsorted(self.resultados.diferencas.keys()):
+##                    clipboard += str(self.resultados.diferencas[freq][i][0]).replace('.',',')
+##                    j += 1
+##                    if j < nfreq:
+##                        clipboard += '\t'
+##                clipboard += '\n'
+##            cb.setText(clipboard, mode=cb.Clipboard)
+##        except:
+##            QApplication.restoreOverrideCursor()
+##            QMessageBox.critical(self, "Erro",
+##                "Nenhum registro aberto!",
+##            QMessageBox.Abort)
+##
+##    # copiar temperatura e umidade para a área de transferência
+##    def copiarTempUmid(self):
+##        try:
+##            clipboard = self.resultados.temperaturaMedia+'\n'+self.resultados.umidadeMedia
+##            cb.setText(clipboard, mode=cb.Clipboard)
+##        except:
+##            QApplication.restoreOverrideCursor()
+##            QMessageBox.critical(self, "Erro",
+##                "Nenhum registro aberto!",
+##            QMessageBox.Abort)
+##
+##    # copiar nome do registro para a área de transferência
+##    def copiarNomeReg(self):
+##        try:
+##            clipboard = self.registro
+##            cb.setText(clipboard, mode=cb.Clipboard)
+##        except:
+##            QApplication.restoreOverrideCursor()
+##            QMessageBox.critical(self, "Erro",
+##                "Nenhum registro aberto!",
+##            QMessageBox.Abort)
+##
+##    # copiar data do registro para a área de transferência
+##    def copiarDataReg(self):
+##        try:
+##            clipboard = self.dataValue.text()
+##            cb.setText(clipboard, mode=cb.Clipboard)
+##        except:
+##            QApplication.restoreOverrideCursor()
+##            QMessageBox.critical(self, "Erro",
+##                "Nenhum registro aberto!",
+##            QMessageBox.Abort)
 
     # copia o gráfico da temperatura e umidade para a área de transferência
     def copiarGrafico(self):
@@ -728,7 +774,7 @@ class App(QMainWindow):
                             if coluna == 0:
                                 clipboard += self.resultados.temperaturaMedia + '\t'
                             elif coluna == 4:
-                                clipboard += self.valmedSelect.currentText() + ' mA \t'
+                                clipboard += self.valmedSelect.currentText() + '\t'
                             elif coluna == 5:
                                 clipboard += self.dataValue.text() + '\t'
                             elif coluna == 22:
