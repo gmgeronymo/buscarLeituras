@@ -3,8 +3,8 @@
 # Data inicial: 23/01/2017
 
 # Dados do programa
-__version__="1.2"
-__date__="03/02/2017"
+__version__="1.4"
+__date__="10/02/2017"
 __appname__="Buscar Leituras"
 __author__="Gean Marcos Geronymo"
 __author_email__="gean.geronymo@gmail.com"
@@ -191,6 +191,13 @@ class App(QMainWindow):
             try:
                 self.resultados = Resultados(self.caminho, self.registro)
                 self.operadorName.setText(self.resultados.id.OPERADOR)   
+
+                # seleciona apenas valores distintos
+                print(self.resultados.valprog)
+                # remover a combobox faixa 792A
+                # exibir a tensão como Faixa / Tensão
+                # mudar o tratamento p/ a busca no banco de dados
+                # remover todas as referencias à combobox de faixa!
                                   
                 for val in self.resultados.valprog:
                     # se for inteiro, remover ',0'
@@ -374,42 +381,6 @@ Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format
 
         self.condicoesAmbientaisGroupBox.setLayout(condicoesAmbientaisGroupBoxLayout)
 
-##    def createAcoesGroupBox(self):
-##        self.acoesGroupBox = QGroupBox("Ações")
-##
-##        self.buscarLeituras = self.createButton("Buscar Leituras", self.buscarLeiturasDB)
-##        
-##        acoesGroupBoxLayout = QHBoxLayout()
-##        acoesGroupBoxLayout.addWidget(self.buscarLeituras)
-##
-##        self.acoesGroupBox.setLayout(acoesGroupBoxLayout)
-##
-##    def createExportarGroupBox(self):
-##        self.exportarGroupBox = QGroupBox("Exportar")
-##        
-##        self.copiarNomeRegistro = self.createButton("Copiar Nome do Registro", self.copiarNomeReg)
-##        self.copiarData = self.createButton("Copiar Data", self.copiarDataReg)
-##        self.copiarLeituras = self.createButton("Copiar Leituras", self.copiarDiferencas)
-##        self.copiarModelo = self.createButton("Copiar Modelo Planilha", self.copiarModeloPlanilha)
-##        self.copiarCondicoesAmbientais = self.createButton("Copiar Condições Ambientais", self.copiarTempUmid)
-##        self.copiarFigura = self.createButton("Copiar Gráfico", self.copiarGrafico)
-##        
-##        exportarGroupBoxLayout = QHBoxLayout()
-##        
-##        exportarGroupBoxLayout.addWidget(self.copiarNomeRegistro)
-##        exportarGroupBoxLayout.addWidget(self.copiarData)
-##        exportarGroupBoxLayout.addWidget(self.copiarLeituras)
-##        exportarGroupBoxLayout.addWidget(self.copiarCondicoesAmbientais)
-##        exportarGroupBoxLayout.addWidget(self.copiarModelo)
-##        exportarGroupBoxLayout.addWidget(self.copiarFigura)
-##
-##        self.exportarGroupBox.setLayout(exportarGroupBoxLayout)
-##
-##    def createButton(self, text, member):
-##        button = QPushButton(text)
-##        button.clicked.connect(member)
-##        return button  
-
     def updateTable(self,linhas,colunas):
        
         self.tableWidget.setRowCount(linhas)
@@ -523,13 +494,19 @@ Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format
                                         self.freqRepetida[freq[coluna-1]].setCheckState(Qt.Checked)
                                     else:
                                         self.freqRepetida[freq[coluna-1]].setCheckState(Qt.Unchecked)
-                                    self.tableWidget.setItem(linha,coluna, self.freqRepetida[freq[coluna-1]])
+                                    self.tableWidget.setItem(linha,coluna, self.freqRepetida[freq_str])
                                 else:
                                     self.tableWidget.setItem(linha,coluna, QTableWidgetItem(freq_str))
                                 self.tableWidget.item(linha,coluna).setBackground(QColor(120,160,200))
                                 self.tableWidget.item(linha, coluna).setFont(font_bold)
                             except: # a última frequencia falha no try e cai nesse caso
-                                self.tableWidget.setItem(linha,coluna, QTableWidgetItem(freq_str))
+                                if (freq[coluna-1].split()[0] == freq[coluna-2].split()[0]):
+                                    self.freqRepetida[freq[coluna-1]] = QTableWidgetItem(freq_str)
+                                    self.freqRepetida[freq[coluna-1]].setFlags(Qt.ItemIsUserCheckable | Qt.ItemIsEnabled)
+                                    self.freqRepetida[freq[coluna-1]].setCheckState(Qt.Unchecked)
+                                    self.tableWidget.setItem(linha,coluna, self.freqRepetida[freq_str])
+                                else:
+                                    self.tableWidget.setItem(linha,coluna, QTableWidgetItem(freq_str))
                                 self.tableWidget.item(linha,coluna).setBackground(QColor(120,160,200))
                                 self.tableWidget.item(linha, coluna).setFont(font_bold)
                         elif (linha > 0) & (linha < self.resultados.linhas + 1):   # leituras de diferenca ac-dc
@@ -604,60 +581,6 @@ Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format
                         self.tableWidget.item(linha,coluna).setBackground(QColor(120,160,200))
                     else:
                         self.tableWidget.item(linha,coluna).setBackground(QColor(255,255,255))
-            
-                
-    # copiar a tabela de diferenças para a área de transferência (inclusive as não selecionadas)
-##    def copiarDiferencas(self):
-##        try:
-##            clipboard = ""
-##            nfreq = len(self.resultados.diferencas)
-##            for i in range(self.resultados.linhas):
-##                j = 0
-##                for freq in realsorted(self.resultados.diferencas.keys()):
-##                    clipboard += str(self.resultados.diferencas[freq][i][0]).replace('.',',')
-##                    j += 1
-##                    if j < nfreq:
-##                        clipboard += '\t'
-##                clipboard += '\n'
-##            cb.setText(clipboard, mode=cb.Clipboard)
-##        except:
-##            QApplication.restoreOverrideCursor()
-##            QMessageBox.critical(self, "Erro",
-##                "Nenhum registro aberto!",
-##            QMessageBox.Abort)
-##
-##    # copiar temperatura e umidade para a área de transferência
-##    def copiarTempUmid(self):
-##        try:
-##            clipboard = self.resultados.temperaturaMedia+'\n'+self.resultados.umidadeMedia
-##            cb.setText(clipboard, mode=cb.Clipboard)
-##        except:
-##            QApplication.restoreOverrideCursor()
-##            QMessageBox.critical(self, "Erro",
-##                "Nenhum registro aberto!",
-##            QMessageBox.Abort)
-##
-##    # copiar nome do registro para a área de transferência
-##    def copiarNomeReg(self):
-##        try:
-##            clipboard = self.registro
-##            cb.setText(clipboard, mode=cb.Clipboard)
-##        except:
-##            QApplication.restoreOverrideCursor()
-##            QMessageBox.critical(self, "Erro",
-##                "Nenhum registro aberto!",
-##            QMessageBox.Abort)
-##
-##    # copiar data do registro para a área de transferência
-##    def copiarDataReg(self):
-##        try:
-##            clipboard = self.dataValue.text()
-##            cb.setText(clipboard, mode=cb.Clipboard)
-##        except:
-##            QApplication.restoreOverrideCursor()
-##            QMessageBox.critical(self, "Erro",
-##                "Nenhum registro aberto!",
-##            QMessageBox.Abort)
 
     # copia o gráfico da temperatura e umidade para a área de transferência
     def copiarGrafico(self):
@@ -695,6 +618,8 @@ Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format
                                 clipboard += self.valmedSelect.currentText() + '\t'
                             elif coluna == 6:
                                 clipboard += self.dataValue.text() + '\t'
+                            elif coluna == 7:
+                                clipboard += str(self.resultados.linhas) + '\t'
                             elif coluna == 28:
                                 clipboard += '\n'
                             else:
@@ -777,6 +702,8 @@ Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format
                                 clipboard += self.valmedSelect.currentText() + '\t'
                             elif coluna == 5:
                                 clipboard += self.dataValue.text() + '\t'
+                            elif coluna == 6:
+                                clipboard += str(self.resultados.linhas) + '\t'
                             elif coluna == 22:
                                 clipboard += '\n'
                             else:
@@ -895,12 +822,17 @@ class Resultados(object):
 
             # verifica se existem frequencias repetidas
             # se existir, adicionar (1), (2)... etc.
-            try:
-                i = 1
-                while self.diferencas[newFreqStr]:
-                    newFreqStr += ' ('+str(i)+')'
-            except:
-                pass
+            # código não mto elegante, mas funciona
+            i = 1
+            repetida = True
+            while (repetida):
+                try:
+                    self.diferencas[newFreqStr]
+                except:
+                    repetida = False
+                else:
+                    newFreqStr = newFreqStr.split()[0] + ' ('+str(i)+')'
+                    i += 1
                             
             self.diferencas[newFreqStr] = cur.execute("SELECT DIFERENCA FROM Leituras WHERE CODREG="+str(self.id.CODREG)+" AND CODPONTO ="+str(row.CODPONTO)).fetchall()
             self.data[newFreqStr] = row.DATACAL.strftime("%d/%m/%y")
