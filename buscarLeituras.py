@@ -3,8 +3,8 @@
 # Data inicial: 23/01/2017
 
 # Dados do programa
-__version__="1.4"
-__date__="10/02/2017"
+__version__="1.5"
+__date__="13/02/2017"
 __appname__="Buscar Leituras"
 __author__="Gean Marcos Geronymo"
 __author_email__="gean.geronymo@gmail.com"
@@ -29,7 +29,7 @@ import datetime
 from numpy import mean, std
 
 # módulos da interface gráfica Qt5
-from PyQt5.QtCore import QDir, Qt
+from PyQt5.QtCore import QDir, Qt, pyqtSlot
 from PyQt5.QtGui import (QFont, QPalette, QColor, QIcon, QKeySequence)
 
 from PyQt5.QtWidgets import (QMainWindow, QWidget, QTableWidget,QTableWidgetItem,
@@ -193,27 +193,43 @@ class App(QMainWindow):
                 self.operadorName.setText(self.resultados.id.OPERADOR)   
 
                 # seleciona apenas valores distintos
-                print(self.resultados.valprog)
-                # remover a combobox faixa 792A
-                # exibir a tensão como Faixa / Tensão
-                # mudar o tratamento p/ a busca no banco de dados
-                # remover todas as referencias à combobox de faixa!
-                                  
-                for val in self.resultados.valprog:
-                    # se for inteiro, remover ',0'
-                    if int(val[0]) == float(val[0]):
-                        self.valmedSelect.addItem(str(int(val[0])))
-                    else:
-                        self.valmedSelect.addItem(str(val[0]).replace('.',','))
-                    if grandezaTensao == True:
-                        if int(val[1]) == float(val[1]):
-                            self.faixa792Select.addItem(str(int(val[1])))
+                # transforma em dict
+                self.valprog = dict()
+                if grandezaTensao == True:              
+                    for val in self.resultados.valprog:
+                        try:
+                            self.valprog[str(val[1]).replace('.',',')]
+                        except:
+                            self.valprog[str(val[1]).replace('.',',')] = []
+                        if int(val[0]) == float(val[0]):
+                            self.valprog[str(val[1]).replace('.',',')].append(str(int(val[0])))
                         else:
-                            self.faixa792Select.addItem(str(val[1]).replace('.',','))       
+                            self.valprog[str(val[1]).replace('.',',')].append(str(val[0]).replace('.',','))
+
+                    
+                    self.faixa792Select.addItems(self.valprog.keys())
+                    self.faixa792Select.currentIndexChanged[str].connect(self.mudaFaixa792)
+                    self.faixa792Select.setCurrentIndex(1)
+                else:
+                    self.valprog[0] = []
+                    for val in self.resultados.valprog:
+                        if int(val[0]) == float(val[0]):
+                            self.valprog[0].append(str(int(val[0])))
+                        else:
+                            self.valprog[0].append(str(val[0]).replace('.',','))
+                    self.valmedSelect.clear()
+                    self.valmedSelect.addItems(self.valprog[0])
+                    
             except:
                 QMessageBox.critical(self, "Erro",
                 "Erro ao conectar com o Banco de Dados!",
                 QMessageBox.Abort)
+
+    @pyqtSlot(str)
+    def mudaFaixa792(self, index):
+        items = self.valprog[str(index)]
+        self.valmedSelect.clear()
+        self.valmedSelect.addItems(items)
 
     def createActions(self):
         self.buscarLeiturasAct = QAction("&Buscar Leituras", self, shortcut="Ctrl+B", 
@@ -419,9 +435,13 @@ Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format
                 self.caminho = caminhoCorrente
                 self.openBancoDadosLabel.setText(self.caminho)   
                 self.valmedLabel.setText("Corrente [mA]: ")
-                self.valmedSelect.clear()
+                try:
+                    self.faixa792Select.disconnect()
+                except:
+                    pass
                 self.faixa792Select.clear()
                 self.faixa792Select.setEnabled(False)
+                self.valmedSelect.clear()                
                 self.openRegistroLabel.setText("")
                 self.openRegistroLabel.setText(caminhoRegistroCorrente)
                 self.operadorName.setText("")
