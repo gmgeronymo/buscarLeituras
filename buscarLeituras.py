@@ -27,6 +27,8 @@ import time
 import datetime
 # o módulo numpy é utilizado para calcular média e desvio padrão
 from numpy import mean, std
+# debug
+import traceback
 
 # módulos da interface gráfica Qt5
 from PyQt5.QtCore import QDir, Qt, pyqtSlot
@@ -564,6 +566,7 @@ Corrente. \n\n Autor: Gean Marcos Geronymo \n Data: {} \n Versão: {} """.format
                 self.umidadeMedia.setText(self.resultados.umidadeMedia)
                 self.plotWidget.plot(self.resultados.date, self.resultados.temperature, self.resultados.humidity)
             except:
+                traceback.print_exc()
                 QMessageBox.critical(self, "Erro",
                 "Erro ao buscar as condições ambientais!",
                 QMessageBox.Abort)         
